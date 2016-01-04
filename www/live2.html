@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Refresh" content="60; url=live2.html" />
+    <title>Camera 2: LIVE</title>
+    <script type="text/javascript" src="js/label_updater.js"></script>
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.blinds-0.9.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/screen.css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+<div id="navigation">
+    <ul>
+        <li><a href="timelapse2.html" class="timelapse">TIMELAPSE</a></li>
+        <li><a href="cgi-bin/mdevents.cgi?camera=2" class="motion">MOTION</a></li>
+        <li><a href="live1.html" class="camera-switch">Camera 1</a></li>
+    </ul>
+</div>
+<h1>Camera 2 <span class="live">LIVE</span></h1>
+<div class="view" style="padding-left:80px">
+    <ul>
+       <li><img src="webcam/webcam2.jpg" alt="LIVE" /></li> 
+       <li><img src="webcam/webcam2-08h.jpg" alt="08:00" /></li> 
+       <li><img src="webcam/webcam2-09h.jpg" alt="09:00" /></li> 
+       <li><img src="webcam/webcam2-10h.jpg" alt="10:00" /></li> 
+       <li><img src="webcam/webcam2-11h.jpg" alt="11:00" /></li> 
+       <li><img src="webcam/webcam2-12h.jpg" alt="12:00" /></li> 
+       <li><img src="webcam/webcam2-13h.jpg" alt="13:00" /></li> 
+       <li><img src="webcam/webcam2-14h.jpg" alt="14:00" /></li> 
+       <li><img src="webcam/webcam2-15h.jpg" alt="15:00" /></li> 
+       <li><img src="webcam/webcam2-16h.jpg" alt="16:00" /></li> 
+       <li><img src="webcam/webcam2-w2.jpg" alt="08:00 week 1" /></li> 
+       <li><img src="webcam/webcam2-w3.jpg" alt="08:00 week 2" /></li> 
+       <li><img src="webcam/webcam2-w4.jpg" alt="08:00 week 3" /></li> 
+       <li><img src="webcam/webcam2-w5.jpg" alt="08:00 week 4" /></li> 
+       <li><img src="webcam/webcam2-w6.jpg" alt="08:00 week 5" /></li> 
+       <li><img src="webcam/webcam2-w7.jpg" alt="08:00 week 6" /></li> 
+    </ul>
+</div>
+<div class="control">
+<div class="center"><a onclick="location.reload()" class="button">Reflesh</a></div>
+<table>
+    <tr>
+        <td><a href="#" onclick="$('.view').blinds_change(1)">8:00<br/><span class="small"><script type="text/javascript">getTorY(8)</script></span></a></td>
+        <td><a href="#" onclick="$('.view').blinds_change(2)">9:00<br/><span class="small"><script type="text/javascript">getTorY(9)</script></span></a></td>
+        <td><a href="#" onclick="$('.view').blinds_change(3)">10:00<br/><span class="small"><script type="text/javascript">getTorY(10)</script></span></a></td>
+        <td><a href="#" onclick="$('.view').blinds_change(4)">11:00<br/><span class="small"><script type="text/javascript">getTorY(11)</script></span></a></td>
+        <td><a href="#" onclick="$('.view').blinds_change(5)">12:00<br/><span class="small"><script type="text/javascript">getTorY(12)</script></span></a></td>
+        <td><a href="#" onclick="$('.view').blinds_change(6)">13:00<br/><span class="small"><script type="text/javascript">getTorY(13)</script></span></a></td>
+        <td><a href="#" onclick="$('.view').blinds_change(7)">14:00<br/><span class="small"><script type="text/javascript">getTorY(14)</script></span></a></td>
+        <td><a href="#" onclick="$('.view').blinds_change(8)">15:00<br/><span class="small"><script type="text/javascript">getTorY(15)</script></span></a></td>
+        <td><a href="#" onclick="$('.view').blinds_change(9)">16:00<br/><span class="small"><script type="text/javascript">getTorY(16)</script></span></a></td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td><a href="#" onclick="$('.view').blinds_change(10)">8:00<br/><script type="text/javascript">getDateShift(1)</script></a></td>
+        <td><a href="#" onclick="$('.view').blinds_change(11)">8:00<br/><script type="text/javascript">getDateShift(2)</script></a></td>
+        <td><a href="#" onclick="$('.view').blinds_change(12)">8:00<br/><script type="text/javascript">getDateShift(3)</script></a></td>
+        <td><a href="#" onclick="$('.view').blinds_change(13)">8:00<br/><script type="text/javascript">getDateShift(4)</script></a></td>
+        <td><a href="#" onclick="$('.view').blinds_change(14)">8:00<br/><script type="text/javascript">getDateShift(5)</script></a></td>
+        <td><a href="#" onclick="$('.view').blinds_change(15)">8:00<br/><script type="text/javascript">getDateShift(6)</script></a></td>
+    </tr>
+</table>
+</div>
+<div id="footer">
+<p>&copy; 2005-2016 <a href="https://github.com/mikan">mikan</a></p>
+</div>
+</div>
+<script type="text/javascript">$(window).load(function () {$('.view').blinds();})</script>
+</body>
+</html>
