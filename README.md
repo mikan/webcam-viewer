@@ -16,10 +16,10 @@ A simple webcam viewer built by HTML, CGI, and some script files.
 │   ├── backup-daily.sh (daily backup task)
 │   ├── backup-hourly.sh (hourly backup task)
 │   ├── cleanup.py (cleaner for old images)
-│   └── thumb.py (thubnail generator)
+│   └── thumb.py (thumbnail generator)
 └── www [/var/www/html]
     ├── css
-    │   ├── lightbox.css
+    │   ├── <lightbox>
     │   └── screen.css
     ├── img
     │   ├── close.png
