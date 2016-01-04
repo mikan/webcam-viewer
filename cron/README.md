@@ -6,7 +6,7 @@ cron scripts directory.
 Sample crontab:
 
 ```
-10 * * * * /<path_to_cron_dir>/mdclean.py
+10 * * * * /<path_to_cron_dir>/cleanup.py
 0 8 * * * /<path_to_cron_dir>/backup-hourly.sh 08
 5 8 * * * /<path_to_cron_dir>/backup-daily.sh
 0 9 * * * /<path_to_cron_dir>/backup-hourly.sh 09
