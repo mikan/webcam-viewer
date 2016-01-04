@@ -37,4 +37,20 @@ A simple webcam viewer built by HTML, CGI, and some script files.
     ├── timelapse1.html
     └── timelapse2.html
 ```
+## Requirements
+
+* [motion](https://packages.debian.org/stable/motion)
+* [apache2](https://packages.debian.org/stable/apache2)
+* [python-pil](https://packages.debian.org/stable/python-pil)
+
+## Included Libraries
+
+* [jQuery 1.10.2](https://jquery.com/) (MIT License)
+* [jQuery Blinds 0.9](http://www.littlewebthings.com/projects/blinds) (MIT License)
+* [jQuery Lazy Load 1.9.1](http://www.appelsiini.net/projects/lazyload) (MIT License)
+* [Lightbox 2.6](http://lokeshdhakar.com/projects/lightbox2/) (MIT License)
+
+## License
+
+webcam-viewer licensed under the [BSD 3-Clause License](LICENSE).
 
