@@ -1,15 +1,20 @@
 webcam-viewer
 =============
 
-A simple webcam viewer built by HTML, CGI, and some script files.
+A simple webcam viewer built with HTML and Python scripts.
 
+## Key Features
+
+* Live View
+* Timelapse Recording and Comparing
+* Motion Events Gathering
 
 ```
 /
 ├── cgi-bin [/usr/lib/cgi-bin]
 │   ├── mdevents.cgi (event list viewer cgi)
 │   └── mdevents.py (mdevents.cgi functions)
-├── conf [/etc/motion]
+├── conf [/etc/motion, /etc/apache2/conf-enabled]
 │   ├── motion.conf (sample configuration file for motion)
 │   └── serve-cgi-bin.conf (sample configuration file for mod_cgi)
 ├── cron
@@ -37,6 +42,7 @@ A simple webcam viewer built by HTML, CGI, and some script files.
     ├── timelapse1.html
     └── timelapse2.html
 ```
+
 ## Requirements
 
 * [motion](https://packages.debian.org/stable/motion)
