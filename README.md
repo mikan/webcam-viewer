@@ -34,7 +34,6 @@ A simple webcam viewer built with HTML and Python scripts.
     ├── js
     │   ├── <jquery>
     │   ├── <lightbox>
-    │   ├── <unslider>
     │   └── label_updater.js
     ├── index.html
     ├── live1.html
