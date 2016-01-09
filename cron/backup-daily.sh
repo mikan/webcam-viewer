@@ -4,8 +4,8 @@ IMGPATH="/var/lib/motion/"
 EXT=".jpg"
 EXTS="-s.jpg"
 FIRST=1
-input1="webcam-08h"
-output1="webcam-w"
+input1="webcam1-08h"
+output1="webcam1-w"
 
 for insert in 6 5 4 3 2 1
 do
