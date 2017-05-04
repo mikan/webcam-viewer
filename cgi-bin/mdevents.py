@@ -20,8 +20,11 @@ def createEventId(t):
 def formatTime(t):
     return t[9:11] + "時" + t[11:13] + "分" + t[13:15] + "秒"
 
+def parent_dir(file_path):
+    return "webcam2" if file_path.split("/")[-2].endswith("2")  else "webcam"
+
 def web_path(file_path):
-    return "/webcam/webcam/" + file_path.split("/")[-1]
+    return "/webcam/" + parent_dir(file_path) + "/" + file_path.split("/")[-1]
 
 def create_file_link(file_path, event):
     return "<a href=\"" + file_path + "\" data-lightbox=\"" + createEventId(event) + "\" title=\"" + formatTime(get_log_name(file_path)) + "\" class=\"button\">" + formatTime(get_log_name(file_path)) + "</a>"
