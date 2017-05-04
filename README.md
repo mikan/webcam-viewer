@@ -15,8 +15,10 @@ A simple webcam viewer built with HTML and Python scripts.
 │   ├── mdevents.cgi (event list viewer cgi)
 │   └── mdevents.py (mdevents.cgi functions)
 ├── conf [/etc/motion, /etc/apache2/conf-enabled]
-│   ├── motion.conf (sample configuration file for motion)
-│   └── serve-cgi-bin.conf (sample configuration file for mod_cgi)
+│   ├── motion.conf (sample configuration file for first camera)
+│   ├── motion2.conf (sample configuration file for second camera if you need)
+│   ├── nginx.conf (sample configuration file for nginx)
+│   └── serve-cgi-bin.conf (sample configuration file for apache mod_cgi)
 ├── cron
 │   ├── backup-daily.sh (daily backup task)
 │   ├── backup-hourly.sh (hourly backup task)
@@ -45,7 +47,7 @@ A simple webcam viewer built with HTML and Python scripts.
 ## Requirements
 
 * [motion](https://packages.debian.org/stable/motion)
-* [apache2](https://packages.debian.org/stable/apache2)
+* [apache2](https://packages.debian.org/stable/apache2) or nginx + fcgiwrap
 * [python-pil](https://packages.debian.org/stable/python-pil)
 
 ## Included Libraries

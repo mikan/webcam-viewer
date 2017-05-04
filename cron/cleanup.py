@@ -6,7 +6,8 @@ import datetime
 import os
 
 IMGDIR = '/var/lib/motion/'
-LIMIT_DAYS = 14
+IMGDIR2 = '/var/lib/motion2/'
+LIMIT_DAYS = 30
 
 def get_date_time(filePath):
     time = filePath.split("/")[-1].split(".")[0].split("-")[2:4]
@@ -32,6 +33,6 @@ def clean_old_log(file_list):
     else:
         print "cleanup: " + str(delete_count) + " files deleted."
 
-clean_old_log(glob.glob(IMGDIR + 'x-archive1-*.jpg'))
-#clean_old_log(glob.glob(IMGDIR + 'x-archive2-*.jpg'))
+clean_old_log(glob.glob(IMGDIR + 'x-archive-*.jpg'))
+clean_old_log(glob.glob(IMGDIR2 + 'x-archive-*.jpg'))
 

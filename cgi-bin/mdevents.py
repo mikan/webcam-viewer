@@ -21,7 +21,7 @@ def formatTime(t):
     return t[9:11] + "時" + t[11:13] + "分" + t[13:15] + "秒"
 
 def web_path(file_path):
-    return "../webcam/" + file_path.split("/")[-1]
+    return "/webcam/webcam/" + file_path.split("/")[-1]
 
 def create_file_link(file_path, event):
     return "<a href=\"" + file_path + "\" data-lightbox=\"" + createEventId(event) + "\" title=\"" + formatTime(get_log_name(file_path)) + "\" class=\"button\">" + formatTime(get_log_name(file_path)) + "</a>"
@@ -65,7 +65,7 @@ def print_event_list(file_list, limit):
         else:
             event_count = event_count + 1
             print "<h2>" + format_date_time(event) + "</h2>"
-            print "<div class=\"view\"><img src=\"../img/loading.gif\" data-original="+ path_list[index]  +" alt=\"image\" class=\"lazy\" /></div>"
+            print "<div class=\"view\"><img src=\"/webcam/img/loading.gif\" data-original="+ path_list[index]  +" alt=\"image\" class=\"lazy\" /></div>"
             print "<div class=\"control\">"
             print create_file_link(path_list[index], event)
             index = index + 1
@@ -82,29 +82,27 @@ html_header = '''Content-Type: text/html
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Camera %d: MOTION</title>
-    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="../js/jquery.lazyload.min.js"></script>
-    <script type="text/javascript" src="../js/lightbox-2.6.min.js"></script>
+    <script type="text/javascript" src="/webcam/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="/webcam/js/jquery.lazyload.min.js"></script>
+    <script type="text/javascript" src="/webcam/js/lightbox-2.6.min.js"></script>
     <script type="text/javascript">$(function(){$("img.lazy").lazyload();});</script>
-    <link rel="stylesheet" type="text/css" href="../css/screen.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="../css/lightbox.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/webcam/css/screen.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/webcam/css/lightbox.css" media="screen" />
 </head>
 <body>
 <div id="wrapper">
 <div id="navigation">
     <ul>
-        <li><a href="../live%d.html" class="live">LIVE</a></li>
-        <li><a href="../timelapse%d.html" class="timelapse">TIMELAPSE</a></li>
-        <!--
+        <li><a href="/webcam/live%d.html" class="live">LIVE</a></li>
+        <li><a href="/webcam/timelapse%d.html" class="timelapse">TIMELAPSE</a></li>
         <li><a href="mdevents.cgi?camera=%d" class="camera-switch">Camera %d</a></li>
-        -->
     </ul>
 </div>
 <h1>Camera %d <span class="motion">MOTION</span></h1>
 '''
 
 html_footer = '''<div id="footer">
-    <p>&copy; 2005-2016 <a href="https://github.com/mikan">mikan</a></p>
+    <p>&copy; 2005-2017 <a href="https://github.com/mikan">mikan</a></p>
 </div>
 </div>
 </body>

@@ -12,9 +12,11 @@ body {
 h1 {
     margin:             0;
     padding:            10px;
+    font-size:		28px;
 }
 h1 span {
     color:              white;
+    padding:		10px;
 }
 h1 span.live {
     background-color:   red;
@@ -114,7 +116,7 @@ a.button {
 
 #navigation {
     float:              right;
-    font-size:          large;
+    font-size:          16px;
     margin-right:       5px;
 }
 #navigation ul {
@@ -128,7 +130,7 @@ a.button {
 #navigation a {
     text-decoration:    none;
     color:              gray;
-    padding:            3px;
+    padding:            5px;
 }
 #navigation a:hover {
     text-decoration:    none;

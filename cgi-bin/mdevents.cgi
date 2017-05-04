@@ -7,8 +7,8 @@ import glob
 
 camera = 1 # selected camera id
 limit = 0 # max display events (0 = unlimited) 
-path1 = "/var/lib/motion/x-archive1-*.jpg"
-path2 = "/var/lib/motion/x-archive2-*.jpg"
+path1 = "/var/lib/motion/x-archive-????????-??????.jpg"
+path2 = "/var/lib/motion2/x-archive-????????-??????.jpg"
 
 # Parse CGI arguments
 args = cgi.parse()
