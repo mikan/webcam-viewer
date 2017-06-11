@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import os, sys
+import os
+import sys
 from PIL import Image
 
 
@@ -14,4 +15,3 @@ try:
     image.save(out_file, "JPEG")
 except IOError:
     print "cannot create thumbnail for ", in_file
-
