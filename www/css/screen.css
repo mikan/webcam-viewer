@@ -84,9 +84,14 @@ p {
 }
 .view li {
     list-style:         none;
+    text-align:         center;
 }
 .view img {
     vertical-align:     bottom; /* delete descender */
+}
+
+.blinds_container {
+    margin:             0 auto;
 }
 
 a.button {
