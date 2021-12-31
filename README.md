@@ -48,7 +48,7 @@ A simple webcam viewer built with HTML and Python scripts.
 
 * [motion](https://packages.debian.org/stable/motion)
 * [apache2](https://packages.debian.org/stable/apache2) or nginx + fcgiwrap
-* [python-pil](https://packages.debian.org/stable/python-pil)
+* [python3-pil](https://packages.debian.org/stable/python3-pil)
 
 ## Included Libraries
 

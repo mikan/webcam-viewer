@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 
@@ -57,7 +57,7 @@ def print_event_list(file_list, limit):
     length = len(eventList)
     if limit <= 0:
         limit = length	# 0 以下なら全件表示
-        print "<div class=\"control center\">" + str(length) + " events found. <a onclick=\"location.reload()\" class=\"button\">Refresh</a></div>"
+        print("<div class=\"control center\">" + str(length) + " events found. <a onclick=\"location.reload()\" class=\"button\">Refresh</a></div>")
 
     # print table
     index = 0	# fileList index
@@ -67,15 +67,15 @@ def print_event_list(file_list, limit):
             break
         else:
             event_count = event_count + 1
-            print "<h2>" + format_date_time(event) + "</h2>"
-            print "<div class=\"view\"><img src=\"/webcam/img/loading.gif\" data-original="+ path_list[index]  +" alt=\"image\" class=\"lazy\" /></div>"
-            print "<div class=\"control\">"
-            print create_file_link(path_list[index], event)
+            print("<h2>" + format_date_time(event) + "</h2>")
+            print("<div class=\"view\"><img src=\"/webcam/img/loading.gif\" data-original="+ path_list[index]  +" alt=\"image\" class=\"lazy\" /></div>")
+            print("<div class=\"control\">")
+            print(create_file_link(path_list[index], event))
             index = index + 1
             for var in range(1, eventDict[event]):
-                print create_file_link(path_list[index], event)
+                print(create_file_link(path_list[index], event))
                 index = index + 1
-            print "</div>"
+            print("</div>")
 
 html_header = '''Content-Type: text/html
 

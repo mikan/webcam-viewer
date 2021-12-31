@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import glob
@@ -26,18 +26,19 @@ def clean_old_log(file_list):
         event_date_time = get_date_time(file_path)
         delta = today - event_date_time
         if delta.days >= LIMIT_DAYS:
-            print "delete event: " + str(event_date_time)
+            print("delete event: " + str(event_date_time))
             os.remove(file_path)
             delete_count = delete_count + 1
     if delete_count == 0:
-        print "cleanup: no deletions."
+        print("cleanup: no deletions.")
     elif delete_count == 1:
-        print "cleanup: 1 file deleted."
+        print("cleanup: 1 file deleted.")
     else:
-        print "cleanup: " + str(delete_count) + " files deleted."
+        print("cleanup: " + str(delete_count) + " files deleted.")
 
 
 if os.path.exists(IMGDIR):
     clean_old_log(glob.glob(IMGDIR + 'x-archive-*.jpg'))
 if os.path.exists(IMGDIR2):
     clean_old_log(glob.glob(IMGDIR2 + 'x-archive-*.jpg'))
+

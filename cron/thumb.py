@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import os
@@ -14,4 +14,5 @@ try:
     image.thumbnail(new_size)
     image.save(out_file, "JPEG")
 except IOError:
-    print "cannot create thumbnail for ", in_file
+    print("cannot create thumbnail for ", in_file)
+

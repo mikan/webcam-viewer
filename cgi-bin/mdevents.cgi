@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import mdevents
@@ -34,7 +34,7 @@ if camera == 2:
     path = path2
 
 # Print the html
-print mdevents.get_header(camera)
+print(mdevents.get_header(camera))
 mdevents.print_event_list(glob.glob(path), limit)
-print mdevents.get_footer(camera)
+print(mdevents.get_footer(camera))
 
