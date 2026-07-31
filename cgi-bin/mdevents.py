@@ -105,7 +105,7 @@ html_header = '''Content-Type: text/html
 '''
 
 html_footer = '''<div id="footer">
-    <p>&copy; 2005-2017 <a href="https://github.com/mikan">mikan</a></p>
+    <p>&copy; 2005-2026 <a href="https://github.com/mikan">mikan</a></p>
 </div>
 </div>
 </body>
