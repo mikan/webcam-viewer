@@ -88,6 +88,7 @@ p {
 }
 .view img {
     vertical-align:     bottom; /* delete descender */
+    max-width:          640px;
 }
 
 .blinds_container {
