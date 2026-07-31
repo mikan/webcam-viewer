@@ -85,7 +85,8 @@ p {
 .view li {
     list-style:         none;
     text-align:         center;
-    width:              640px;
+    max-width:          640px;
+    max-height:         480px;
 }
 .view img {
     vertical-align:     bottom; /* delete descender */
