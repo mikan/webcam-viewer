@@ -48,6 +48,12 @@ def create_file_link(file_path, event):
     )
 
 
+def no_events():
+    print(
+        '<div class="control center">No events found. <a onclick="location.reload()" class="button">Refresh</a></div>'
+    )
+
+
 # event listing function
 # @param file_list file list
 # @param limit event printing limit
@@ -109,8 +115,6 @@ def print_event_list(file_list, limit):
 # @param file_list file list
 # @param limit event printing limit
 def print_video_list(file_list, limit):
-    if len(file_list) == 0:
-        return
     path_list = []
     for path in file_list:
         path_list.append(web_path(path))

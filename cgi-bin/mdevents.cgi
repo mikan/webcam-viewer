@@ -31,14 +31,21 @@ except KeyError:
     limit = 0
 
 # Select a camera
-path = path1
-mpath = mpath1
+video_list = []
+pic_list = []
+if camera == 1:
+    video_list = glob.glob(mpath1)
+    pic_list = glob.glob(path1)
 if camera == 2:
-    path = path2
-    mpath = mpath2
+    video_list = glob.glob(mpath2)
+    pic_list = glob.glob(path2)
 
 # Print the html
 print(mdevents.get_header(camera))
-mdevents.print_video_list(glob.glob(mpath), limit)
-mdevents.print_event_list(glob.glob(path), limit)
+if len(video_list) > 0:
+    mdevents.print_video_list(video_list, limit)
+if len(pic_list) > 0:
+    mdevents.print_event_list(pic_list, limit)
+if len(video_list) == 0 and len(pic_list) == 0:
+    mdevents.no_events()
 print(mdevents.get_footer(camera))
