@@ -15,8 +15,9 @@ A simple webcam viewer built with HTML and Python scripts.
 │   ├── mdevents.cgi (event list viewer cgi)
 │   └── mdevents.py (mdevents.cgi functions)
 ├── conf [/etc/motion, /etc/apache2/conf-enabled]
-│   ├── motion.conf (sample configuration file for first camera)
-│   ├── motion2.conf (sample configuration file for second camera if you need)
+│   ├── motion.conf (sample configuration file for motion)
+│   ├── camera1.conf (sample configuration file for motion camera 1)
+│   ├── camera1.conf (sample configuration file for motion camera 2)
 │   ├── nginx.conf (sample configuration file for nginx)
 │   └── serve-cgi-bin.conf (sample configuration file for apache mod_cgi)
 ├── cron
