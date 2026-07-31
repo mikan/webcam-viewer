@@ -68,7 +68,7 @@ def print_event_list(file_list, limit):
         else:
             event_count = event_count + 1
             print("<h2>" + format_date_time(event) + "</h2>")
-            print("<div class=\"view\"><img src=\"/webcam/img/loading.gif\" data-original="+ path_list[index]  +" alt=\"image\" class=\"lazy\" /></div>")
+            print("<div class=\"view\"><img src=\"/webcam/img/loading.gif\" data-original="+ path_list[index]  +" alt=\"image\" class=\"lazy\" width=\"100%\"/></div>")
             print("<div class=\"control\">")
             print(create_file_link(path_list[index], event))
             index = index + 1
