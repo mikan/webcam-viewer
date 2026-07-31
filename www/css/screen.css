@@ -85,23 +85,16 @@ p {
 }
 
 .view {
-    text-align: center;
-    vertical-align: bottom;
-    background-color: black;
+    margin: 0;
+    padding: 0;
 }
 
 .view li {
     list-style: none;
-    text-align: center;
 }
 
 .view img {
-    vertical-align: bottom; /* delete descender */
     max-width: 640px;
-}
-
-.blinds_container {
-    margin: 0 auto;
 }
 
 a.button {

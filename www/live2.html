@@ -5,8 +5,6 @@
     <meta http-equiv="Refresh" content="60; url=live2.html"/>
     <title>Camera 2: LIVE</title>
     <script type="text/javascript" src="js/label_updater.js"></script>
-    <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
-    <script type="text/javascript" src="js/jquery.blinds-0.9.js"></script>
     <link type="text/css" rel="stylesheet" href="css/screen.css" media="screen"/>
 </head>
 <body>
@@ -19,70 +17,87 @@
         </ul>
     </div>
     <h1>Camera 2 <span class="live">LIVE</span></h1>
-    <div class="view">
-        <ul>
-            <li><img src="webcam2/webcam.jpg" alt="LIVE"/></li>
-            <li><img src="webcam2/webcam-08h.jpg" alt="08:00"/></li>
-            <li><img src="webcam2/webcam-09h.jpg" alt="09:00"/></li>
-            <li><img src="webcam2/webcam-10h.jpg" alt="10:00"/></li>
-            <li><img src="webcam2/webcam-11h.jpg" alt="11:00"/></li>
-            <li><img src="webcam2/webcam-12h.jpg" alt="12:00"/></li>
-            <li><img src="webcam2/webcam-13h.jpg" alt="13:00"/></li>
-            <li><img src="webcam2/webcam-14h.jpg" alt="14:00"/></li>
-            <li><img src="webcam2/webcam-15h.jpg" alt="15:00"/></li>
-            <li><img src="webcam2/webcam-16h.jpg" alt="16:00"/></li>
-            <li><img src="webcam2/webcam-w2.jpg" alt="08:00 week 1"/></li>
-            <li><img src="webcam2/webcam-w3.jpg" alt="08:00 week 2"/></li>
-            <li><img src="webcam2/webcam-w4.jpg" alt="08:00 week 3"/></li>
-            <li><img src="webcam2/webcam-w5.jpg" alt="08:00 week 4"/></li>
-            <li><img src="webcam2/webcam-w6.jpg" alt="08:00 week 5"/></li>
-            <li><img src="webcam2/webcam-w7.jpg" alt="08:00 week 6"/></li>
-        </ul>
-    </div>
+    <ul class="view">
+        <li><img src="webcam2/webcam.jpg" alt="LIVE"/></li>
+        <li hidden><img src="webcam2/webcam-08h.jpg" alt="08:00"/></li>
+        <li hidden><img src="webcam2/webcam-09h.jpg" alt="09:00"/></li>
+        <li hidden><img src="webcam2/webcam-10h.jpg" alt="10:00"/></li>
+        <li hidden><img src="webcam2/webcam-11h.jpg" alt="11:00"/></li>
+        <li hidden><img src="webcam2/webcam-12h.jpg" alt="12:00"/></li>
+        <li hidden><img src="webcam2/webcam-13h.jpg" alt="13:00"/></li>
+        <li hidden><img src="webcam2/webcam-14h.jpg" alt="14:00"/></li>
+        <li hidden><img src="webcam2/webcam-15h.jpg" alt="15:00"/></li>
+        <li hidden><img src="webcam2/webcam-16h.jpg" alt="16:00"/></li>
+        <li hidden><img src="webcam2/webcam-w2.jpg" alt="08:00 week 1"/></li>
+        <li hidden><img src="webcam2/webcam-w3.jpg" alt="08:00 week 2"/></li>
+        <li hidden><img src="webcam2/webcam-w4.jpg" alt="08:00 week 3"/></li>
+        <li hidden><img src="webcam2/webcam-w5.jpg" alt="08:00 week 4"/></li>
+        <li hidden><img src="webcam2/webcam-w6.jpg" alt="08:00 week 5"/></li>
+        <li hidden><img src="webcam2/webcam-w7.jpg" alt="08:00 week 6"/></li>
+    </ul>
     <div class="control">
         <div class="center"><a onclick="location.reload()" class="button">Reflesh</a></div>
         <table>
             <tr>
-                <td><a href="#" onclick="$('.view').blinds_change(1)">8:00<br/><span class="small"><script
-                        type="text/javascript">getTorY(8)</script></span></a></td>
-                <td><a href="#" onclick="$('.view').blinds_change(2)">9:00<br/><span class="small"><script
-                        type="text/javascript">getTorY(9)</script></span></a></td>
-                <td><a href="#" onclick="$('.view').blinds_change(3)">10:00<br/><span class="small"><script
-                        type="text/javascript">getTorY(10)</script></span></a></td>
-                <td><a href="#" onclick="$('.view').blinds_change(4)">11:00<br/><span class="small"><script
-                        type="text/javascript">getTorY(11)</script></span></a></td>
-                <td><a href="#" onclick="$('.view').blinds_change(5)">12:00<br/><span class="small"><script
-                        type="text/javascript">getTorY(12)</script></span></a></td>
-                <td><a href="#" onclick="$('.view').blinds_change(6)">13:00<br/><span class="small"><script
-                        type="text/javascript">getTorY(13)</script></span></a></td>
-                <td><a href="#" onclick="$('.view').blinds_change(7)">14:00<br/><span class="small"><script
-                        type="text/javascript">getTorY(14)</script></span></a></td>
-                <td><a href="#" onclick="$('.view').blinds_change(8)">15:00<br/><span class="small"><script
-                        type="text/javascript">getTorY(15)</script></span></a></td>
-                <td><a href="#" onclick="$('.view').blinds_change(9)">16:00<br/><span class="small"><script
-                        type="text/javascript">getTorY(16)</script></span></a></td>
+                <td>
+                    <a href="#" onclick="changeView(1)">8:00<br/><span class="small"><script>getTorY(8)</script></span></a>
+                </td>
+                <td>
+                    <a href="#" onclick="changeView(2)">9:00<br/><span class="small"><script>getTorY(9)</script></span></a>
+                </td>
+                <td>
+                    <a href="#" onclick="changeView(3)">10:00<br/><span class="small"><script>getTorY(10)</script></span></a>
+                </td>
+                <td>
+                    <a href="#" onclick="changeView(4)">11:00<br/><span class="small"><script>getTorY(11)</script></span></a>
+                </td>
+                <td>
+                    <a href="#" onclick="changeView(5)">12:00<br/><span class="small"><script>getTorY(12)</script></span></a>
+                </td>
+                <td>
+                    <a href="#" onclick="changeView(6)">13:00<br/><span class="small"><script>getTorY(13)</script></span></a>
+                </td>
+                <td>
+                    <a href="#" onclick="changeView(7)">14:00<br/><span class="small"><script>getTorY(14)</script></span></a>
+                </td>
+                <td>
+                    <a href="#" onclick="changeView(8)">15:00<br/><span class="small"><script>getTorY(15)</script></span></a>
+                </td>
+                <td>
+                    <a href="#" onclick="changeView(9)">16:00<br/><span class="small"><script>getTorY(16)</script></span></a>
+                </td>
             </tr>
         </table>
         <table>
             <tr>
-                <td><a href="#" onclick="$('.view').blinds_change(10)">8:00<br/>
-                    <script type="text/javascript">getDateShift(1)</script>
+                <td>
+                    <a href="#" onclick="changeView(10)">8:00<br/>
+                        <script>getDateShift(1)</script>
+                    </a>
+                </td>
+                <td>
+                    <a href="#" onclick="changeView(11)">8:00<br/>
+                        <script>getDateShift(2)</script>
+                    </a>
+                </td>
+                <td>
+                    <a href="#" onclick="changeView(12)">8:00<br/>
+                        <script>getDateShift(3)</script>
+                    </a>
+                </td>
+                <td>
+                    <a href="#" onclick="changeView(13)">8:00<br/>
+                        <script>getDateShift(4)</script>
+                    </a>
+                </td>
+                <td><a href="#" onclick="changeView(14)">8:00<br/>
+                    <script>getDateShift(5)</script>
                 </a></td>
-                <td><a href="#" onclick="$('.view').blinds_change(11)">8:00<br/>
-                    <script type="text/javascript">getDateShift(2)</script>
-                </a></td>
-                <td><a href="#" onclick="$('.view').blinds_change(12)">8:00<br/>
-                    <script type="text/javascript">getDateShift(3)</script>
-                </a></td>
-                <td><a href="#" onclick="$('.view').blinds_change(13)">8:00<br/>
-                    <script type="text/javascript">getDateShift(4)</script>
-                </a></td>
-                <td><a href="#" onclick="$('.view').blinds_change(14)">8:00<br/>
-                    <script type="text/javascript">getDateShift(5)</script>
-                </a></td>
-                <td><a href="#" onclick="$('.view').blinds_change(15)">8:00<br/>
-                    <script type="text/javascript">getDateShift(6)</script>
-                </a></td>
+                <td>
+                    <a href="#" onclick="changeView(15)">8:00<br/>
+                        <script>getDateShift(6)</script>
+                    </a>
+                </td>
             </tr>
         </table>
     </div>
@@ -90,8 +105,14 @@
         <p>&copy; 2005-2026 <a href="https://github.com/mikan">mikan</a></p>
     </div>
 </div>
-<script type="text/javascript">$(window).load(function () {
-    $('.view').blinds();
-})</script>
+<script>
+    const viewElements = document.getElementsByClassName("view")[0].children;
+
+    function changeView(index) {
+        for (let i = 0; i < viewElements.length; i++) {
+            viewElements[i].hidden = i !== index;
+        }
+    }
+</script>
 </body>
 </html>
