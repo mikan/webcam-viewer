@@ -54,8 +54,7 @@ A simple webcam viewer built with HTML and Python scripts.
 
 ## Included Libraries
 
-* [jQuery 1.10.2](https://jquery.com/) (MIT License)
-* [jQuery Blinds 0.9](http://www.littlewebthings.com/projects/blinds) (MIT License)
+* [jQuery 2.2.4](https://jquery.com/) (MIT License)
 * [jQuery Lazy Load 1.9.1](http://www.appelsiini.net/projects/lazyload) (MIT License)
 * [Lightbox 2.6](http://lokeshdhakar.com/projects/lightbox2/) (MIT License)
 
