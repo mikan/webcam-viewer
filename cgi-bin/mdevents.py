@@ -94,7 +94,7 @@ def print_event_list(file_list, limit):
             print(
                 '<div class="view"><img src="/webcam/img/loading.gif" data-original='
                 + path_list[index]
-                + ' alt="image" class="lazy" width="100%"/></div>'
+                + ' alt="image" class="lazy" max-width="100%"/></div>'
             )
             print('<div class="control">')
             print(create_file_link(path_list[index], event))
