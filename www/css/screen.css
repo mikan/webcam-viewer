@@ -89,11 +89,11 @@ p {
     padding: 0;
     background-color: black;
     text-align: center;
+    line-height: 0;
 }
 
 .view li {
     list-style: none;
-    line-height: 0;
 }
 
 .view img {
