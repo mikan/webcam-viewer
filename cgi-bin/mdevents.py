@@ -105,6 +105,45 @@ def print_event_list(file_list, limit):
             print("</div>")
 
 
+# video listing function
+# @param file_list file list
+# @param limit event printing limit
+def print_video_list(file_list, limit):
+    if len(file_list) == 0:
+        return
+    path_list = []
+    for path in file_list:
+        path_list.append(web_path(path))
+    path_list.sort()  # sort by date-time
+    path_list.reverse()
+
+    # count result
+    length = len(path_list)
+    if limit <= 0:
+        limit = length  # 0 以下なら全件表示
+        print(
+            '<div class="control center">'
+            + str(length)
+            + ' videos found. <a onclick="location.reload()" class="button">Refresh</a></div>'
+        )
+
+    # print table
+    video_count = 0  # printed event count
+    for path in path_list:
+        if video_count >= limit:
+            break
+        else:
+            time = get_log_name(path)  # yyyymmdd-HHMMSS
+            event = time[0:13]  # yyyymmdd-HHMM
+            video_count = video_count + 1
+            print("<h2>" + format_date_time(event) + "</h2>")
+            print(
+                '<div class="view"><video controls><source src="'
+                + path
+                + '" type="video/mp4" /></video></div>'
+            )
+
+
 html_header = """Content-Type: text/html
 
 <!DOCTYPE html>

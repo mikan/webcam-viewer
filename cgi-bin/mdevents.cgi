@@ -9,6 +9,8 @@ camera = 1  # selected camera id
 limit = 0  # max display events (0 = unlimited)
 path1 = "/var/lib/motion/x-archive-????????-??????.jpg"
 path2 = "/var/lib/motion2/x-archive-????????-??????.jpg"
+mpath1 = "/var/lib/motion/y-archive-????????-??????.mp4"
+mpath2 = "/var/lib/motion2/y-archive-????????-??????.mp4"
 
 # Parse CGI arguments
 args = cgi.parse()
@@ -30,10 +32,13 @@ except KeyError:
 
 # Select a camera
 path = path1
+mpath = mpath1
 if camera == 2:
     path = path2
+    mpath = mpath2
 
 # Print the html
 print(mdevents.get_header(camera))
+mdevents.print_video_list(glob.glob(mpath), limit)
 mdevents.print_event_list(glob.glob(path), limit)
 print(mdevents.get_footer(camera))
