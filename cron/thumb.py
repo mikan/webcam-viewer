@@ -15,4 +15,3 @@ try:
     image.save(out_file, "JPEG")
 except IOError:
     print("cannot create thumbnail for ", in_file)
-

@@ -6,15 +6,22 @@ import datetime
 import os
 import os.path
 
-IMGDIR = '/var/lib/motion/'
-IMGDIR2 = '/var/lib/motion2/'
+IMGDIR = "/var/lib/motion/"
+IMGDIR2 = "/var/lib/motion2/"
 LIMIT_DAYS = 30
 
 
 def get_date_time(filePath):
     time = filePath.split("/")[-1].split(".")[0].split("-")[2:4]
     s = time[0] + time[1]
-    return datetime.datetime(int(s[0:4]), int(s[4:6]), int(s[6:8]), int(s[8:10]), int(s[10:12]), int(s[12:14]))
+    return datetime.datetime(
+        int(s[0:4]),
+        int(s[4:6]),
+        int(s[6:8]),
+        int(s[8:10]),
+        int(s[10:12]),
+        int(s[12:14]),
+    )
 
 
 def clean_old_log(file_list):
@@ -38,7 +45,8 @@ def clean_old_log(file_list):
 
 
 if os.path.exists(IMGDIR):
-    clean_old_log(glob.glob(IMGDIR + 'x-archive-*.jpg'))
+    clean_old_log(glob.glob(IMGDIR + "x-archive-*.jpg"))
+    clean_old_log(glob.glob(IMGDIR + "y-archive-*.mp4"))
 if os.path.exists(IMGDIR2):
-    clean_old_log(glob.glob(IMGDIR2 + 'x-archive-*.jpg'))
-
+    clean_old_log(glob.glob(IMGDIR2 + "x-archive-*.jpg"))
+    clean_old_log(glob.glob(IMGDIR + "y-archive-*.mp4"))

@@ -5,8 +5,8 @@ import mdevents
 import cgi
 import glob
 
-camera = 1 # selected camera id
-limit = 0 # max display events (0 = unlimited) 
+camera = 1  # selected camera id
+limit = 0  # max display events (0 = unlimited)
 path1 = "/var/lib/motion/x-archive-????????-??????.jpg"
 path2 = "/var/lib/motion2/x-archive-????????-??????.jpg"
 
@@ -37,4 +37,3 @@ if camera == 2:
 print(mdevents.get_header(camera))
 mdevents.print_event_list(glob.glob(path), limit)
 print(mdevents.get_footer(camera))
-
